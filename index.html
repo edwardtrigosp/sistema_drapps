@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<h2>Sistema para administrar empleados empresa Drapp</h2>
+<button type="button" class="btn btn-primary" onclick="mostrarFormRegistro();">Agregar empleado</button>
+<hr>
+<section id="seccionRegistrarse">
+<div class="container mt-3">
+  <h2>Formulario de Registro</h2>
+  <form action="javascript:crearEmpleado();">
+    <div class="mb-3 mt-3">
+      <label for="usuario">CC:</label>
+        <input type="documento" class="form-control" id="documentoId" placeholder="Digite su identificación" name="documento">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="nombres">Nombres y Apellidos:</label>
+      <input type="text" class="form-control" id="nombreId" placeholder="Digite su nombre" name="nombre">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="usuario">Direccion:</label>
+      <input type="text" class="form-control" id="direccionId" placeholder="Digite su dirección" name="direccion">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="usuario">Email:</label>
+      <input type="email" class="form-control" id="emailId" placeholder="Digite su email" name="email">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="usuario">Telefono:</label>
+      <input type="text" class="form-control" id="telefonoId" placeholder="Digite su teléfono" name="telefono">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="usuario">Sueldo Base:</label>
+      <input type="text" class="form-control" id="sueldoBaseId" placeholder="Digite su sueldo base" name="sueldoBase">
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="usuario">Tipo de Empleado:</label>
+      <select class="form-select" id="tipoEmpleadoId">
+        <option>Fijo</option>
+        <option>Contrato</option>
+      </select>
+    </div>
+    <div class="mb-3 mt-3">
+      <label for="usuario">Tipo de Bonificación:</label>
+      <select class="form-select" id="tipoBonificacionId">
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+      </select>
+    </div>
+    <button type="submit"  id="btnGuardar" class="btn btn-primary">Registrarse</button>
+  </form>
+</div>
+</section>
+
+<!-- tabla vista de empleados registrados -->
+ <h3>Lista de empleados</h3>
+<table class="table table-hover" id="tablaEmpleados">
+  <tbody>
+  <tr>
+    <td>No.</td>
+    <td>CC</td>
+    <td>Nombres y Apellidos</td>
+    <td>Direccion</td>
+    <td>Email</td>
+    <td>Telefono</td>
+    <td>Sueldo Base</td>
+    <td>Tipo de Empleado</td>
+    <td>Tipo de Bonificación</td>
+    <td>Acciones</td>
+  </tr>
+  </tbody> 
+</table>
+<div
+    id="totalNomina"
+    class="mt-4 fs-3 fw-bold text-end">
+</div>
+
+
+
+
+<!-- Pasos -->
+ <!-- Instanciar las Clases ---- JS --- 
+  1. Clase Padre
+  2. Clases extendidas o hijas  
+  3. Controladores-->
+
+  
+  
+
+
+<script src="model/Empleado.js"></script>
+<script src="model/Contrato.js"></script>
+
+<script src="controller/main.js"></script>
+
+<script src="js/script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
